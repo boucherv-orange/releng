@@ -53,6 +53,9 @@ class ResultCreateRequest(models.ModelBase):
                  details=None,
                  build_tag=None,
                  scenario=None,
+                 vnf_version=None,
+                 vnfm_version=None,
+                 vnfd_version=None,
                  criteria=None,
                  trust_indicator=None):
         self.pod_name = pod_name
@@ -65,6 +68,9 @@ class ResultCreateRequest(models.ModelBase):
         self.details = details
         self.build_tag = build_tag
         self.scenario = scenario
+        self.vnf_version = vnf_version
+        self.vnfm_version = vnfm_version
+        self.vnfd_version = vnfd_version
         self.criteria = criteria
         self.trust_indicator = trust_indicator if trust_indicator else TI(0)
 
@@ -88,7 +94,8 @@ class TestResult(models.ModelBase):
     def __init__(self, _id=None, case_name=None, project_name=None,
                  pod_name=None, installer=None, version=None,
                  start_date=None, stop_date=None, details=None,
-                 build_tag=None, scenario=None, criteria=None,
+                 build_tag=None, scenario=None, vnf_version=None,
+                 vnfm_version=None, vnfd_version=None, criteria=None,
                  trust_indicator=None):
         self._id = _id
         self.case_name = case_name
@@ -101,6 +108,9 @@ class TestResult(models.ModelBase):
         self.details = details
         self.build_tag = build_tag
         self.scenario = scenario
+        self.vnf_version = vnf_version
+        self.vnfm_version = vnfm_version
+        self.vnfd_version = vnfd_version
         self.criteria = criteria
         self.trust_indicator = trust_indicator
 

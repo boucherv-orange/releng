@@ -69,6 +69,7 @@ class ResultsCLHandler(GenericResultHandler):
                  - build_tag : Jenkins build tag name
                  - period : x (x last days)
                  - scenario : the test scenario (previously version)
+                 - vnf_version : the version of the VNF
                  - criteria : the global criteria status passed or failed
                  - trust_indicator : evaluate the stability of the test case
                    to avoid running systematically long and stable test case
@@ -106,6 +107,10 @@ class ResultsCLHandler(GenericResultHandler):
             @type scenario: L{string}
             @in scenario: query
             @required scenario: False
+            @param vnf_version: i.e. 107
+            @type vnf_version: L{string}
+            @in vnf_version: query
+            @required vnf_version: False
             @param criteria: i.e. passed
             @type criteria: L{string}
             @in criteria: query
