@@ -4,7 +4,7 @@ services:
     image: mongo:3.2.1
     container_name: opnfv-mongo
   testapi:
-    image: opnfv/testapi:latest
+    image: boucherv/testapi:latest
     container_name: opnfv-testapi
     environment:
       - mongodb_url=mongodb://mongo:27017/
