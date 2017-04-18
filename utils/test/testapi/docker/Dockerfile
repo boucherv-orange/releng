@@ -43,7 +43,7 @@ crudini \
 RUN pip install --upgrade pip
 
 RUN git config --global http.sslVerify false
-RUN git clone https://gerrit.opnfv.org/gerrit/releng /home/releng
+RUN git clone https://github.com/boucherv-orange/releng.git /home/releng
 
 WORKDIR /home/releng/utils/test/testapi/
 RUN pip install -r requirements.txt
